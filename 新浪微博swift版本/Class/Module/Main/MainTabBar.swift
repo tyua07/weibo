@@ -29,15 +29,29 @@ class MainTabBar: UITabBar {
         super.layoutSubviews()
         //手动修改所有按钮的位置
         
-        print(self.subviews)
+        let width = self.bounds.width / 5
+        let height = self.bounds.height
+        let rect = CGRect(x: 0, y: 0, width: width, height: height)
+        var index:CGFloat = 0//索引
+        for subview in self.subviews {
+            if subview.isKindOfClass(NSClassFromString("UITabBarButton")!) {
+                subview.frame = CGRectOffset(rect, width * index, 0)
+                //设置按钮
+                index = index == 1 ? index + 2 : index + 1
+            }
+        }
+        
+        composeBtn.frame = CGRectOffset(rect, width * 2, -20)
+        bringSubviewToFront(composeBtn)
     }
 
-    //设置按钮
+    //MARK: 添加按钮
     private func setBtn(){
         addSubview(composeBtn)
     }
     
-    var composeBtn: UIButton {
+    //MARK: 懒加载 中间按钮
+    lazy var composeBtn: UIButton = {
         let btn = UIButton()
         
         btn.setBackgroundImage(UIImage(named: "tabbar_compose_button"), forState: .Normal)
@@ -48,5 +62,6 @@ class MainTabBar: UITabBar {
         
         btn.sizeToFit()
         return btn
-    }
+    }()
+    
 }

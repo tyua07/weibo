@@ -10,28 +10,37 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    //MARK: 发送微博按钮点击事件
+    @objc private func composeClick (){
+        print(__FUNCTION__)
+    }
+    
     override func viewDidLoad() {
         
         let mainTabBar = MainTabBar()
         
+        //自定义当前TabBar
         setValue(mainTabBar, forKey: "tabBar")
         
         super.viewDidLoad()
-
         //添加子视图控制器
         self.addChildController()
+        
+        //给发送微博按钮点击事件
+        mainTabBar.composeBtn.addTarget(self, action: "composeClick", forControlEvents: .TouchUpInside)
     }
     
-    //添加子视图控制器
+    
+    
+    //MARK: 添加子视图控制器
     private func addChildController(){
-        
         addChildViewController(HomeTableViewController(), title: "首页", image: "tabbar_home")
         addChildViewController(MessageTableViewController(), title: "消息", image: "tabbar_message_center")
         addChildViewController(DiscoverTableViewController(), title: "发现", image: "tabbar_discover")
         addChildViewController(ProfileTableViewController(), title: "我", image: "tabbar_profile")
     }
     
-    // 添加单个子视图
+    //MARK: 添加单个子视图
     private func addChildViewController(vc: UIViewController, title: String, image:String){
         
         //设置字体颜色
@@ -52,15 +61,5 @@ class MainTabBarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
