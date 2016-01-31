@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.whiteColor()
         window?.makeKeyAndVisible()
         
+        //设置全局颜色
+        UINavigationBar.appearance().tintColor  = themeColor
+        UITabBar.appearance().tintColor         = themeColor
+        
         window?.rootViewController = MainTabBarController()
         
         return true

@@ -43,9 +43,6 @@ class MainTabBarController: UITabBarController {
     //MARK: 添加单个子视图
     private func addChildViewController(vc: UIViewController, title: String, image:String){
         
-        //设置字体颜色
-        self.tabBar.tintColor = UIColor.orangeColor()
-        
         let nav = UINavigationController(rootViewController: vc)
         
         vc.title = title

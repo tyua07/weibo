@@ -13,6 +13,9 @@
 		EB2D623E1C5D0A9400EE70D7 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D623D1C5D0A9400EE70D7 /* ProfileTableViewController.swift */; };
 		EB2D62421C5D0AD600EE70D7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D62411C5D0AD600EE70D7 /* MainTabBarController.swift */; };
 		EB2D62441C5D119100EE70D7 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D62431C5D119100EE70D7 /* MainTabBar.swift */; };
+		EB97030D1C5E3C2E009AA352 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB97030C1C5E3C2E009AA352 /* BaseTableViewController.swift */; };
+		EB9703101C5E3E5F009AA352 /* VisitorLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB97030F1C5E3E5F009AA352 /* VisitorLoginView.swift */; };
+		EB9703121C5E6140009AA352 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9703111C5E6140009AA352 /* Common.swift */; };
 		EBD6150E1C5B8271002CC242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6150D1C5B8271002CC242 /* AppDelegate.swift */; };
 		EBD615151C5B8272002CC242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD615141C5B8272002CC242 /* Assets.xcassets */; };
 		EBD615231C5B8272002CC242 /* ____swift__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD615221C5B8272002CC242 /* ____swift__Tests.swift */; };
@@ -43,6 +46,9 @@
 		EB2D623D1C5D0A9400EE70D7 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		EB2D62411C5D0AD600EE70D7 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EB2D62431C5D119100EE70D7 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		EB97030C1C5E3C2E009AA352 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		EB97030F1C5E3E5F009AA352 /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorLoginView.swift; sourceTree = "<group>"; };
+		EB9703111C5E6140009AA352 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		EBD6150A1C5B8271002CC242 /* 新浪微博swift版本.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新浪微博swift版本.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD6150D1C5B8271002CC242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD615141C5B8272002CC242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		EB2D62231C5D08DB00EE70D7 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EB97030B1C5E3C05009AA352 /* Base */,
 				EB2D62261C5D08DB00EE70D7 /* Main */,
 				EB2D62251C5D08DB00EE70D7 /* Home */,
 				EB2D62241C5D08DB00EE70D7 /* Discover */,
@@ -154,6 +161,7 @@
 		EB2D62291C5D08DB00EE70D7 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EB9703111C5E6140009AA352 /* Common.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -163,6 +171,23 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EB97030B1C5E3C05009AA352 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EB97030E1C5E3E1F009AA352 /* VisitorLoginView */,
+				EB97030C1C5E3C2E009AA352 /* BaseTableViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EB97030E1C5E3E1F009AA352 /* VisitorLoginView */ = {
+			isa = PBXGroup;
+			children = (
+				EB97030F1C5E3E5F009AA352 /* VisitorLoginView.swift */,
+			);
+			path = VisitorLoginView;
 			sourceTree = "<group>";
 		};
 		EBD615011C5B8271002CC242 = {
@@ -348,10 +373,13 @@
 			files = (
 				EB2D623E1C5D0A9400EE70D7 /* ProfileTableViewController.swift in Sources */,
 				EB2D62381C5D0A7800EE70D7 /* HomeTableViewController.swift in Sources */,
+				EB97030D1C5E3C2E009AA352 /* BaseTableViewController.swift in Sources */,
 				EB2D62441C5D119100EE70D7 /* MainTabBar.swift in Sources */,
 				EB2D62421C5D0AD600EE70D7 /* MainTabBarController.swift in Sources */,
 				EBD6150E1C5B8271002CC242 /* AppDelegate.swift in Sources */,
 				EB2D623C1C5D0A8900EE70D7 /* MessageTableViewController.swift in Sources */,
+				EB9703101C5E3E5F009AA352 /* VisitorLoginView.swift in Sources */,
+				EB9703121C5E6140009AA352 /* Common.swift in Sources */,
 				EB2D623A1C5D0A7F00EE70D7 /* DiscoverTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
