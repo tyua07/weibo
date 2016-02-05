@@ -25,7 +25,8 @@ class BaseTableViewController: UITableViewController, VisitorViewDelegate {
     
     //MARK: 登录
     func login() {
-        print("login")
+        let nv = UINavigationController(rootViewController: OAuthViewController())
+        presentViewController(nv, animated: true, completion: nil)
     }
     
     //MARK: 注册

@@ -1,3 +1,7 @@
-platform:ios, '6.0'   
+use_frameworks!
+platform :ios, '8.0'
 
-pod 'AFNetworking', '~> 2.3.1' 
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'SVProgressHUD'
+pod 'SnapKit'
