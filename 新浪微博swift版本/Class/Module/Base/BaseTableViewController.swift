@@ -31,7 +31,7 @@ class BaseTableViewController: UITableViewController, VisitorViewDelegate {
     
     //MARK: 注册
     func register() {
-        print("register")
+        print(UserInfoModel.loadData())
     }
     
     //MARK: 设置未登录时的视图

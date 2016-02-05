@@ -93,7 +93,7 @@ extension OAuthViewController : UIWebViewDelegate {
         AFN.responseSerializer.acceptableContentTypes?.insert("text/plain")
         AFN.POST("https://api.weibo.com/oauth2/access_token", parameters: params, success: { (_, result) -> Void in
             if let dict = result as? [String : AnyObject] {
-                var userInfo = UserInfoModel(dict: dict)
+                let userInfo = UserInfoModel(dict: dict)
                 //获得用户信息
                 self.getUserInfo(userInfo)
             }
@@ -115,6 +115,8 @@ extension OAuthViewController : UIWebViewDelegate {
                 userInfo.avatar_large   = dict["avatar_large"] as? String
                 
                 print(userInfo)
+                //归档数据
+                userInfo.saveData()
             }
             
             }) { (_, error) -> Void in
