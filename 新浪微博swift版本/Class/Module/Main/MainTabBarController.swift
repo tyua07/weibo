@@ -34,14 +34,21 @@ class MainTabBarController: UITabBarController {
     
     //MARK: 添加子视图控制器
     private func addChildController(){
-        addChildViewController(HomeTableViewController(), title: "首页", image: "tabbar_home")
-        addChildViewController(MessageTableViewController(), title: "消息", image: "tabbar_message_center")
-        addChildViewController(DiscoverTableViewController(), title: "发现", image: "tabbar_discover")
-        addChildViewController(ProfileTableViewController(), title: "我", image: "tabbar_profile")
+        self.addChildViewController("HomeTableViewController", title: "首页", image: "tabbar_home")
+        self.addChildViewController("MessageTableViewController", title: "消息", image: "tabbar_message_center")
+        self.addChildViewController("DiscoverTableViewController", title: "发现", image: "tabbar_discover")
+        self.addChildViewController("ProfileTableViewController", title: "我", image: "tabbar_profile")
     }
     
     //MARK: 添加单个子视图
-    private func addChildViewController(vc: UIViewController, title: String, image:String){
+    private func addChildViewController(controllerName: String, title: String, image:String){
+        
+        //获得当前命名空间
+        let nameSpace = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
+        
+        let className : AnyClass?   = (NSClassFromString(nameSpace + "." + controllerName))
+        let vcClass                 = className as! UIViewController.Type
+        let vc                      = vcClass.init()
         
         let nav = UINavigationController(rootViewController: vc)
         

@@ -18,9 +18,40 @@ class BaseTableViewController: UITableViewController, VisitorViewDelegate {
     //MARK: 重写loadView
     override func loadView() {
         super.loadView()
-        userIsLogin == true ? super.loadView() : self.setNoLoginView()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: "register")
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登录", style: .Plain, target: self, action: "login")
+        
+        if (userIsLogin != true) {
+            self.setNoLoginView()
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: "register")
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "登录", style: .Plain, target: self, action: "login")
+            return
+        }
+        super.loadView()
+        //设置UI
+        self.setupUI()
+        
+    }
+    
+    //MARK: 设置UI
+    private func setupUI(){
+        navigationItem.leftBarButtonItem    = UIBarButtonItem.createBarButtonItem("navigationbar_friendattention", targer: self, action: "leftBarButtonClick")
+        navigationItem.rightBarButtonItem   = UIBarButtonItem.createBarButtonItem("navigationbar_pop", targer: self, action: "rightBarButtonClick")
+        
+        let titleBtn = TitleButton()
+        titleBtn.setTitle("杨一繁 ", forState: .Normal)
+        titleBtn.addTarget(self, action: "titleBtnClick:", forControlEvents: .TouchUpInside)
+        navigationItem.titleView = titleBtn
+    }
+    
+    @objc private func titleBtnClick(btn: UIButton){
+        btn.selected = !btn.selected
+    }
+    
+    @objc private func leftBarButtonClick() {
+        print(__FUNCTION__)
+    }
+    
+    @objc private func rightBarButtonClick() {
+        print(__FUNCTION__)
     }
     
     //MARK: 登录
@@ -45,11 +76,5 @@ class BaseTableViewController: UITableViewController, VisitorViewDelegate {
     //MARK: 重写viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 }

@@ -9,6 +9,8 @@
 import UIKit
 
 class MainTabBar: UITabBar {
+    
+    let controllerTotalSize: CGFloat = 5 //tabbar个数
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,21 +20,21 @@ class MainTabBar: UITabBar {
     }
 
     required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
-        
         //设置按钮
         self.setBtn()
     }
     
+    //MARK: 重写layoutSubviews
     override func layoutSubviews() {
         super.layoutSubviews()
         //手动修改所有按钮的位置
         
-        let width = self.bounds.width / 5
-        let height = self.bounds.height
-        let rect = CGRect(x: 0, y: 0, width: width, height: height)
-        var index:CGFloat = 0//索引
+        let width           = self.bounds.width / self.controllerTotalSize
+        let height          = self.bounds.height
+        let rect            = CGRect(x: 0, y: 0, width: width, height: height)
+        var index:CGFloat   = 0//索引
+        
         for subview in self.subviews {
             if subview.isKindOfClass(NSClassFromString("UITabBarButton")!) {
                 subview.frame = CGRectOffset(rect, width * index, 0)
