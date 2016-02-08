@@ -13,7 +13,7 @@ class BaseTableViewController: UITableViewController, VisitorViewDelegate {
     var visitorView: VisitorLoginView?
     
     //是否登录状态
-    var userIsLogin = false
+    var userIsLogin = UserInfoModel.isLogin()
     
     //MARK: 重写loadView
     override func loadView() {

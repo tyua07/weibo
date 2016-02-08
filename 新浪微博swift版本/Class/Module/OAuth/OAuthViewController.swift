@@ -90,7 +90,7 @@ extension OAuthViewController : UIWebViewDelegate {
     //MARK: 获得token
     private func getToken (code : String) {
         let params = ["client_id" : self.appId, "client_secret" : self.appSecret, "grant_type" : self.grantType, "code" : code, "redirect_uri" : self.redirectUrl]
-        NetworkTools.shareNetWorkToole().POST("https://api.weibo.com/oauth2/access_token", parameters: params, success: { (_, result) -> Void in
+        NetworkTools.shareNetWorkToole().POST("oauth2/access_token", parameters: params, success: { (_, result) -> Void in
             if let dict = result as? [String : AnyObject] {
                 let userInfo = UserInfoModel(dict: dict)
                 //获得用户信息
@@ -105,7 +105,7 @@ extension OAuthViewController : UIWebViewDelegate {
     //MARK: 获得用户信息
     private func getUserInfo(userInfo : UserInfoModel){
         let params      = ["access_token" : userInfo.access_token!, "uid" : userInfo.uid!]
-        NetworkTools.shareNetWorkToole().GET("https://api.weibo.com/2/users/show.json", parameters: params, success: { (_, result) -> Void in
+        NetworkTools.shareNetWorkToole().GET("2/users/show.json", parameters: params, success: { (_, result) -> Void in
             if let dict = result as? [String : AnyObject] {
                 userInfo.name           = dict["name"] as? String
                 userInfo.avatar_large   = dict["avatar_large"] as? String

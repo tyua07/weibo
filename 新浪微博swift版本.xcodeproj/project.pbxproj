@@ -23,6 +23,7 @@
 		EB9703121C5E6140009AA352 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9703111C5E6140009AA352 /* Common.swift */; };
 		EBB2A9C71C65B8C100E256EA /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2A9C61C65B8C100E256EA /* TitleButton.swift */; };
 		EBB2A9C91C66E32400E256EA /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2A9C81C66E32400E256EA /* NetworkTools.swift */; };
+		EBB2A9CB1C68228000E256EA /* HomeWeiboListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2A9CA1C68228000E256EA /* HomeWeiboListModel.swift */; };
 		EBD6150E1C5B8271002CC242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6150D1C5B8271002CC242 /* AppDelegate.swift */; };
 		EBD615151C5B8272002CC242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD615141C5B8272002CC242 /* Assets.xcassets */; };
 		EBD615231C5B8272002CC242 /* ____swift__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD615221C5B8272002CC242 /* ____swift__Tests.swift */; };
@@ -66,6 +67,7 @@
 		EB9703111C5E6140009AA352 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		EBB2A9C61C65B8C100E256EA /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		EBB2A9C81C66E32400E256EA /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		EBB2A9CA1C68228000E256EA /* HomeWeiboListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWeiboListModel.swift; sourceTree = "<group>"; };
 		EBD6150A1C5B8271002CC242 /* 新浪微博swift版本.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新浪微博swift版本.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD6150D1C5B8271002CC242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD615141C5B8272002CC242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				EB19C9801C64947600D24BCF /* UserInfoModel.swift */,
+				EBB2A9CA1C68228000E256EA /* HomeWeiboListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				EB19C97B1C63395F00D24BCF /* OAuthViewController.swift in Sources */,
 				EB2D623A1C5D0A7F00EE70D7 /* DiscoverTableViewController.swift in Sources */,
 				EBB2A9C71C65B8C100E256EA /* TitleButton.swift in Sources */,
+				EBB2A9CB1C68228000E256EA /* HomeWeiboListModel.swift in Sources */,
 				EB2B87531C65AFE50053123A /* UIBarButtonItem+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

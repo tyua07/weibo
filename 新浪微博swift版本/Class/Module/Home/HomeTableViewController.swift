@@ -13,5 +13,8 @@ class HomeTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        //加载微博数据
+        HomeWeiboListModel.loadWeiboListData()
     }
 }
