@@ -15,6 +15,8 @@ class HomeTableViewController: BaseTableViewController {
         
         
         //加载微博数据
-        HomeWeiboListModel.loadWeiboListData()
+        HomeWeiboListModel.loadWeiboListData { (homeWeiboModels, error) -> () in
+            print(homeWeiboModels)
+        }
     }
 }

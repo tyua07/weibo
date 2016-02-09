@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		35DF6CF887E2C4D0B101F659 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A6AE9D54AD31DA6A8A0444 /* Pods.framework */; };
 		EB19C97B1C63395F00D24BCF /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB19C97A1C63395F00D24BCF /* OAuthViewController.swift */; };
-		EB19C9811C64947600D24BCF /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB19C9801C64947600D24BCF /* UserInfoModel.swift */; };
 		EB19C9831C64E92B00D24BCF /* String+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB19C9821C64E92B00D24BCF /* String+category.swift */; };
 		EB2B87531C65AFE50053123A /* UIBarButtonItem+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2B87521C65AFE50053123A /* UIBarButtonItem+extension.swift */; };
 		EB2D62381C5D0A7800EE70D7 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2D62371C5D0A7800EE70D7 /* HomeTableViewController.swift */; };
@@ -24,6 +23,8 @@
 		EBB2A9C71C65B8C100E256EA /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2A9C61C65B8C100E256EA /* TitleButton.swift */; };
 		EBB2A9C91C66E32400E256EA /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2A9C81C66E32400E256EA /* NetworkTools.swift */; };
 		EBB2A9CB1C68228000E256EA /* HomeWeiboListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2A9CA1C68228000E256EA /* HomeWeiboListModel.swift */; };
+		EBB2A9CE1C68938F00E256EA /* HomeUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2A9CD1C68938F00E256EA /* HomeUserModel.swift */; };
+		EBB2AA0E1C697CE100E256EA /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2AA0D1C697CE100E256EA /* UserInfoModel.swift */; };
 		EBD6150E1C5B8271002CC242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD6150D1C5B8271002CC242 /* AppDelegate.swift */; };
 		EBD615151C5B8272002CC242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD615141C5B8272002CC242 /* Assets.xcassets */; };
 		EBD615231C5B8272002CC242 /* ____swift__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD615221C5B8272002CC242 /* ____swift__Tests.swift */; };
@@ -53,7 +54,6 @@
 		7967E7783CFBAEA4834883F2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EB19C97A1C63395F00D24BCF /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		EB19C97C1C64623D00D24BCF /* 新浪微博swift版本-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "新浪微博swift版本-Bridging-Header.h"; sourceTree = "<group>"; };
-		EB19C9801C64947600D24BCF /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		EB19C9821C64E92B00D24BCF /* String+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+category.swift"; sourceTree = "<group>"; };
 		EB2B87521C65AFE50053123A /* UIBarButtonItem+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+extension.swift"; sourceTree = "<group>"; };
 		EB2D62371C5D0A7800EE70D7 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -61,13 +61,15 @@
 		EB2D623B1C5D0A8900EE70D7 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		EB2D623D1C5D0A9400EE70D7 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		EB2D62411C5D0AD600EE70D7 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		EB2D62431C5D119100EE70D7 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		EB2D62431C5D119100EE70D7 /* MainTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBar.swift; path = ../../Module/Main/MainTabBar.swift; sourceTree = "<group>"; };
 		EB97030C1C5E3C2E009AA352 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		EB97030F1C5E3E5F009AA352 /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorLoginView.swift; sourceTree = "<group>"; };
+		EB97030F1C5E3E5F009AA352 /* VisitorLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitorLoginView.swift; path = ../../../Module/Base/VisitorLoginView/VisitorLoginView.swift; sourceTree = "<group>"; };
 		EB9703111C5E6140009AA352 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		EBB2A9C61C65B8C100E256EA /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		EBB2A9C81C66E32400E256EA /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
-		EBB2A9CA1C68228000E256EA /* HomeWeiboListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWeiboListModel.swift; sourceTree = "<group>"; };
+		EBB2A9CA1C68228000E256EA /* HomeWeiboListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeWeiboListModel.swift; path = "新浪微博swift版本/Class/Model/HomeWeiboListModel.swift"; sourceTree = SOURCE_ROOT; };
+		EBB2A9CD1C68938F00E256EA /* HomeUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUserModel.swift; sourceTree = "<group>"; };
+		EBB2AA0D1C697CE100E256EA /* UserInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		EBD6150A1C5B8271002CC242 /* 新浪微博swift版本.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新浪微博swift版本.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD6150D1C5B8271002CC242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD615141C5B8272002CC242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,8 +138,8 @@
 		EB2D62221C5D08DB00EE70D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EB19C9801C64947600D24BCF /* UserInfoModel.swift */,
-				EBB2A9CA1C68228000E256EA /* HomeWeiboListModel.swift */,
+				EBB2AA0A1C69761B00E256EA /* OAuth */,
+				EBB2A9CC1C68936C00E256EA /* Home */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				EB2D62411C5D0AD600EE70D7 /* MainTabBarController.swift */,
-				EB2D62431C5D119100EE70D7 /* MainTabBar.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -211,6 +212,8 @@
 		EB2D622A1C5D08DB00EE70D7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2AA0B1C697C2000E256EA /* Base */,
+				EBB2AA091C6975E000E256EA /* Main */,
 				EBB2A9C61C65B8C100E256EA /* TitleButton.swift */,
 			);
 			path = ViewModel;
@@ -219,18 +222,50 @@
 		EB97030B1C5E3C05009AA352 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				EB97030E1C5E3E1F009AA352 /* VisitorLoginView */,
 				EB97030C1C5E3C2E009AA352 /* BaseTableViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		EB97030E1C5E3E1F009AA352 /* VisitorLoginView */ = {
+		EBB2A9CC1C68936C00E256EA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2A9CA1C68228000E256EA /* HomeWeiboListModel.swift */,
+				EBB2A9CD1C68938F00E256EA /* HomeUserModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EBB2AA091C6975E000E256EA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EB2D62431C5D119100EE70D7 /* MainTabBar.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EBB2AA0A1C69761B00E256EA /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2AA0D1C697CE100E256EA /* UserInfoModel.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		EBB2AA0B1C697C2000E256EA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2AA0C1C697C3F00E256EA /* VisitorLogin */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EBB2AA0C1C697C3F00E256EA /* VisitorLogin */ = {
 			isa = PBXGroup;
 			children = (
 				EB97030F1C5E3E5F009AA352 /* VisitorLoginView.swift */,
 			);
-			path = VisitorLoginView;
+			path = VisitorLogin;
 			sourceTree = "<group>";
 		};
 		EBD615011C5B8271002CC242 = {
@@ -477,14 +512,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB2AA0E1C697CE100E256EA /* UserInfoModel.swift in Sources */,
 				EB2D623E1C5D0A9400EE70D7 /* ProfileTableViewController.swift in Sources */,
 				EB2D62381C5D0A7800EE70D7 /* HomeTableViewController.swift in Sources */,
 				EB97030D1C5E3C2E009AA352 /* BaseTableViewController.swift in Sources */,
+				EBB2A9CE1C68938F00E256EA /* HomeUserModel.swift in Sources */,
 				EB2D62441C5D119100EE70D7 /* MainTabBar.swift in Sources */,
 				EB2D62421C5D0AD600EE70D7 /* MainTabBarController.swift in Sources */,
 				EB19C9831C64E92B00D24BCF /* String+category.swift in Sources */,
 				EBD6150E1C5B8271002CC242 /* AppDelegate.swift in Sources */,
-				EB19C9811C64947600D24BCF /* UserInfoModel.swift in Sources */,
 				EBB2A9C91C66E32400E256EA /* NetworkTools.swift in Sources */,
 				EB2D623C1C5D0A8900EE70D7 /* MessageTableViewController.swift in Sources */,
 				EB9703101C5E3E5F009AA352 /* VisitorLoginView.swift in Sources */,
