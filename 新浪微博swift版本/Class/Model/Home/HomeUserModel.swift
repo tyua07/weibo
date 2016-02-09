@@ -10,11 +10,11 @@ import UIKit
 
 class HomeUserModel: NSObject {
     
-    var id : Int = 0 //用户UID
-    var screen_name : String? //用户昵称
-    var name : String? //友好显示名称
-    var profile_image_url : String?//用户头像地址（中图），50×50像素
-    var verified_reason : Int?//认证原因
+    var id                  : Int = 0 //用户UID
+    var screen_name         : String? //用户昵称
+    var name                : String? //友好显示名称
+    var profile_image_url   : String?//用户头像地址（中图），50×50像素
+    var verified_reason     : Int?//认证原因
     
     init(dict : [String : AnyObject]) {
         super.init()

@@ -17,8 +17,6 @@ class BaseTableViewController: UITableViewController, VisitorViewDelegate {
     
     //MARK: 重写loadView
     override func loadView() {
-        super.loadView()
-        
         if (userIsLogin != true) {
             self.setNoLoginView()
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .Plain, target: self, action: "register")
@@ -28,7 +26,6 @@ class BaseTableViewController: UITableViewController, VisitorViewDelegate {
         super.loadView()
         //设置UI
         self.setupUI()
-        
     }
     
     //MARK: 设置UI

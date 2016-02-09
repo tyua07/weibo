@@ -14,10 +14,6 @@ class OAuthViewController: UIViewController {
     
     
     let webView     = UIWebView()
-    let appId       = "2461372076"
-    let redirectUrl = "http://blog.womenshuo.com"
-    let appSecret   = "338fd3997b0291d0a82b5a3a824fdb05"
-    let grantType   = "authorization_code"
     
     //MARK: 重新loadView
     override func loadView() {
@@ -37,17 +33,17 @@ class OAuthViewController: UIViewController {
     
     //MARK: 设置webview
     private func loadOAuthPage(){
-        self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "https://api.weibo.com/oauth2/authorize?client_id=\(self.appId)&redirect_uri=\(self.redirectUrl)")!))
+        self.webView.loadRequest(NSURLRequest(URL: NSURL(string: "https://api.weibo.com/oauth2/authorize?client_id=\(UserInfoModel.appId)&redirect_uri=\(UserInfoModel.redirectUrl)")!))
         
     }
     
     //MARK: 设置UI
     private func setupUI(){
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "返回", style: .Plain, target: self, action: "close")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", style: .Plain, target: self, action: "autoComplete")
+        navigationItem.leftBarButtonItem    = UIBarButtonItem(title: "返回", style: .Plain, target: self, action: "close")
+        navigationItem.rightBarButtonItem   = UIBarButtonItem(title: "自动填充", style: .Plain, target: self, action: "autoComplete")
     }
     
-    //MARK: 关闭
+    //MARK: 关闭 WebView
     @objc private func close(){
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -71,7 +67,7 @@ extension OAuthViewController : UIWebViewDelegate {
             return true
         }
         
-        if !url.hasPrefix("\(redirectUrl)") {
+        if !url.hasPrefix("\(UserInfoModel.redirectUrl)") {
             return false
         }
         
@@ -82,42 +78,8 @@ extension OAuthViewController : UIWebViewDelegate {
         let codeQuery = "code="
         let code = query.substringFromIndex(codeQuery.endIndex)
         //获得token
-        self.getToken(code)
+        UserInfoModel.getToken(code)
         return true
-    }
-    
-    
-    //MARK: 获得token
-    private func getToken (code : String) {
-        let params = ["client_id" : self.appId, "client_secret" : self.appSecret, "grant_type" : self.grantType, "code" : code, "redirect_uri" : self.redirectUrl]
-        NetworkTools.shareNetWorkToole().POST("oauth2/access_token", parameters: params, success: { (_, result) -> Void in
-            if let dict = result as? [String : AnyObject] {
-                let userInfo = UserInfoModel(dict: dict)
-                //获得用户信息
-                self.getUserInfo(userInfo)
-            }
-            
-            }) { (_, error) -> Void in
-                print(error)
-        }
-    }
-    
-    //MARK: 获得用户信息
-    private func getUserInfo(userInfo : UserInfoModel){
-        let params      = ["access_token" : userInfo.access_token!, "uid" : userInfo.uid!]
-        NetworkTools.shareNetWorkToole().GET("2/users/show.json", parameters: params, success: { (_, result) -> Void in
-            if let dict = result as? [String : AnyObject] {
-                userInfo.name           = dict["name"] as? String
-                userInfo.avatar_large   = dict["avatar_large"] as? String
-                
-                print(userInfo)
-                //归档数据
-                userInfo.saveData()
-            }
-            
-            }) { (_, error) -> Void in
-                print(error)
-        }
     }
     
     func webViewDidStartLoad(webView: UIWebView){
